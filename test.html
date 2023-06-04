@@ -1,0 +1,53 @@
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+         .item-a {
+            grid-area: header;
+            background-color: red;
+         }
+
+         .item-b {
+            background-color: green;
+            grid-area: main;
+         }
+
+         .item-c {
+            background-color: blue;
+            grid-area: sidebar;
+         }
+
+         .item-d {
+            background-color: salmon;
+            grid-area: footer;
+         }
+
+         .container {
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-rows: auto;
+            grid-template-areas:
+               "header header header header"
+               "main . . sidebar"
+               "footer footer footer footer";
+         }
+
+      </style>
+   </head>
+
+   <body>
+
+      <div class="container">
+         <section class="item-a">a</section>
+         <section class="item-b">b</section>
+         <section class="item-c">c</section>
+         <section class="item-d">d</section>
+      </div>
+
+   </body>
+
+</html>
